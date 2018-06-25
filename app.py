@@ -6,8 +6,8 @@ import pickle
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
 )
-
-with open('indexing','rb') as f:
+os.system('ls')
+with open('Indexing','rb') as f:
     index=pickle.load(f)
 
 
@@ -49,4 +49,4 @@ def query(i):
 	return answers
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=80)
